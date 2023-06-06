@@ -1,0 +1,136 @@
+.brands-list {
+  &__button-next-hide {
+    border: none;
+    margin-left: 39px;
+    display: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  &__button-next {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  &__element {
+    height: 72px;
+    background-color: white;
+    border-radius: 6px;
+    justify-content: space-between;
+    border: 1px solid $borderColor;
+  }
+  &__navigation::-webkit-scrollbar {
+    width: 0.1em;
+    background-color: transparent;
+  }
+  &__element {
+    display: flex;
+    align-items: center;
+    img {
+      margin-left: 16px;
+    }
+  }
+  &__button {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: solid #ff3e79;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 36px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #ff3e79;
+      border-radius: 100%;
+      top: calc(50% + 2px);
+      left: calc(50% + 2px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__img-next {
+    margin-right: 0px;
+    transform: translate(0, -7px);
+  }
+  &__img-next {
+    background-image: url('../img/next-button.svg');
+    height: 10.29px;
+    width: 7.41px;
+    align-self: center;
+    margin-right: 16px;
+    &-hide {
+      background-image: url('../img/next-button-hide.svg');
+      height: 10.29px;
+      width: 7.41px;
+      transform: translate(0, 7px);
+      margin-right: 16px;
+    }
+  }
+  &__button-next {
+    display: flex;
+
+    margin-left: 39px;
+  }
+}
+.brands-header {
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  margin-top: 32px;
+  border-bottom: 1px solid #d9fff5;
+  border-top: 1px solid #d9fff5;
+}
+@media (min-width: 768px) {
+  .brands-list {
+    &__navigation {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-right: 24px;
+      margin-left: 30px;
+    }
+    &__element {
+      width: 240px;
+    }
+    &__pc {
+      display: none;
+    }
+    &__button-next {
+      font-size: 16px;
+      font-weight: bold;
+      &-hide {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media (min-width: 786) and (max-width: 1119px) {
+  .brands-list {
+    &__element {
+      width: 224px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .brands-list {
+    &__button-next {
+      display: none;
+      &-hide {
+        display: none;
+      }
+    }
+    &__element {
+      margin-bottom: 16px;
+    }
+  }
+}

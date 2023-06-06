@@ -1,0 +1,120 @@
+$redColor: #ff3e79;
+$headerBorderColor: #d9fff5;
+$white: #ffffff;
+$borderColor: #eaeaea;
+.type-list {
+  &__element {
+    width: 240px;
+    height: 160px;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    border: 1px solid #eaeaea;
+    display: flex;
+    span {
+      align-self: flex-start;
+      margin-top: 16px;
+      margin-left: 16px;
+    }
+  }
+  &__button {
+    position: relative;
+    -webkit-box-pack: cente r;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: solid $redColor;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 36px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    align-self: flex-end;
+    margin-right: 31px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $redColor;
+      border-radius: 100%;
+      top: calc(50% + 2px);
+      left: calc(50% + 2px);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    &-next {
+      border: none;
+      display: flex;
+      font-weight: bold;
+      flex-direction: row;
+      background-color: transparent;
+      margin-left: 39px;
+      &-hide {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        font-weight: bold;
+        margin-left: 39px;
+        display: none;
+      }
+    }
+  }
+}
+.swiper-two {
+  margin-left: 32px;
+}
+@media (max-width: 767px) {
+  .type-list {
+    &__element {
+      width: 95%;
+      margin-bottom: 0;
+    }
+    &__button-next {
+      display: none;
+      &-hide {
+        display: none;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .swiper-pagination-two {
+    display: none;
+  }
+  .type-list {
+    gap: 16px;
+    margin-right: 32px;
+    &__element {
+      margin-right: 24px;
+      width: 224px;
+      padding: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+    &__pc {
+      display: none;
+    }
+    &__navigation {
+      flex-wrap: wrap;
+      position: relative;
+      left: -8px;
+
+      gap: 16px;
+    }
+  }
+}
+.type-tech {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+}

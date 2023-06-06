@@ -1,0 +1,199 @@
+$redColor: #ff3e79;
+$headerBorderColor: #d9fff5;
+$white: #ffffff;
+$borderColor: #eaeaea;
+.price {
+  display: flex;
+  flex-direction: column;
+  &__element {
+    height: 200px;
+    width: 260px;
+    background-color: $white;
+  }
+  &-text {
+    padding-bottom: 0;
+    margin-top: 10px;
+  }
+  &__text-info {
+    width: 60%;
+    margin-left: 24px;
+    margin-top: 20px;
+  }
+  &__info {
+    &-arrow {
+      justify-content: center;
+      border: solid $redColor;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-45deg) translate(4px, 6px);
+      margin-right: 31px;
+      cursor: pointer;
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+  &__buy {
+    width: 119px;
+    height: 32px;
+    background-color: $redColor;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    &:hover {
+      animation-name: price-anim;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+    &-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transform: translate(5px);
+      color: $white;
+    }
+  }
+  &__arrow {
+    justify-content: center;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+
+    transform: rotate(-45deg) translate(10px, 8px);
+    margin-right: 31px;
+
+    cursor: pointer;
+  }
+  &__table {
+    margin-left: 24px;
+    margin-right: 24px;
+    border-collapse: collapse;
+    flex-grow: 1;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  &__th-element {
+    background-color: transparent;
+    text-align: left;
+    padding: 10px;
+    &:first-child {
+      padding-left: 24px;
+    }
+    padding-top: 50px;
+    color: gray;
+    font-size: 14px;
+  }
+  &__td-element {
+    background-color: $white;
+    padding: 10px;
+    &-with-line {
+      padding-left: 24px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        transform: translate(39px, 35px);
+        width: calc(100% - 80px);
+        height: 1px;
+        background-color: $borderColor;
+      }
+    }
+    &-left {
+      &-bottom {
+        border-bottom-left-radius: 6px;
+        padding-left: 24px;
+      }
+      &-top {
+        border-top-left-radius: 6px;
+      }
+    }
+    &-right {
+      &-top {
+        border-top-right-radius: 6px;
+      }
+      &-bottom {
+        border-bottom-right-radius: 6px;
+      }
+    }
+  }
+}
+.no-border {
+  border-bottom: 0;
+}
+.bbb {
+  width: 120px;
+}
+
+@media (max-width: 767px) {
+  .swiper-pagination {
+    &-three {
+      text-align: center;
+    }
+    &-two {
+      text-align: center;
+    }
+  }
+  .price {
+    &__service {
+      height: 72px;
+      &-text {
+        margin: 4px;
+      }
+      &-name {
+        color: gray;
+        margin: 0px;
+        margin-top: 16px;
+      }
+    }
+    &__table {
+      display: none;
+    }
+    &__element {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+      justify-content: space-between;
+      flex: 1;
+      p {
+        font-size: 14px;
+        border: none;
+        margin-left: 16px;
+        max-width: 90%;
+      }
+    }
+    &__price {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-name {
+        margin: 0px;
+        color: gray;
+      }
+    }
+    &__info-service {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__buy-mobile {
+      transform: translate(-16px, 64px);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .price {
+    &__phone {
+      display: none;
+    }
+    &__services {
+      display: flex;
+    }
+  }
+}
