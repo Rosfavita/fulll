@@ -14,8 +14,13 @@ closeModal.addEventListener('click', function () {
 
 let modalTwo = document.getElementById('myAsideTwo')
 let openModalTwo = document.getElementsByClassName('aside__chat')
+let openModalTwo2 = document.getElementsByClassName('header-nav__chat')
 let closeModalTwo = document.getElementById('aside-close-two')
 openModalTwo[0].addEventListener('click', function () {
+  modalTwo.style.display = 'block'
+  opacityWindow()
+})
+openModalTwo2[0].addEventListener('click', function () {
   modalTwo.style.display = 'block'
   opacityWindow()
 })
@@ -27,8 +32,13 @@ closeModalTwo.addEventListener('click', function () {
 
 let modalThree = document.getElementById('myAsideThree')
 let openModalThree = document.getElementsByClassName('aside__call')
+let openModalThree2 = document.getElementsByClassName('header-nav__call')
 let closeModalThree = document.getElementById('aside-close-three')
 openModalThree[0].addEventListener('click', function () {
+  modalThree.style.display = 'block'
+  opacityWindow()
+})
+openModalThree2[0].addEventListener('click', function () {
   modalThree.style.display = 'block'
   opacityWindow()
 })
